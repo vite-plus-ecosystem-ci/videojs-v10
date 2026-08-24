@@ -18,6 +18,12 @@
       "persistent": true,
       "interactive": false
     },
+    "dev:https": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true,
+      "interactive": false
+    },
     "clean": {
       "cache": false
     },
