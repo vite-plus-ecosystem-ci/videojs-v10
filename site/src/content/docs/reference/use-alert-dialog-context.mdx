@@ -1,0 +1,28 @@
+---
+title: useAlertDialogContext
+description: Hook to access the nearest AlertDialog compound-component context
+---
+
+import UtilReference from "@/components/docs/api-reference/UtilReference.astro";
+
+## Import
+
+```tsx
+import { useAlertDialogContext } from "@videojs/react";
+```
+
+## Usage
+
+Use this hook to build a custom part rendered inside `AlertDialog.Root`.
+
+```tsx
+function CustomCloseButton() {
+  const { dialog } = useAlertDialogContext();
+
+  return <button onClick={() => dialog.close()}>Close</button>;
+}
+```
+
+The hook throws when there is no surrounding `AlertDialog.Root`.
+
+<UtilReference util="useAlertDialogContext" />
