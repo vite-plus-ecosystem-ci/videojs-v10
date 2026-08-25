@@ -27,8 +27,7 @@ The attachment flow is:
 
 Each release function removes only the element that registered it, so disconnecting an older element cannot clear a newer registration. The provider watches for plain `<video>` and `<audio>` elements as they are added, removed, or replaced.
 
-{/* TODO: link destroyCallback to lifecycle reference once written (https://github.com/videojs/v10/issues/1034) */}
-On `disconnectedCallback`, the mixin detaches the current media target but keeps the store alive. An element moved in the DOM reconnects without losing state. The store is destroyed in `destroyCallback`.
+On `disconnectedCallback`, the mixin detaches the current media target but keeps the store alive. An element moved in the DOM reconnects without losing state. The store is destroyed in `destroyCallback`. See <DocsLink slug="concepts/custom-element-lifecycle">Custom element lifecycle</DocsLink> for the distinction between temporary disconnection and permanent destruction.
 
 ### When to split provider and container
 
