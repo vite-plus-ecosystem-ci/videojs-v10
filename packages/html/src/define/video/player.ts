@@ -9,6 +9,12 @@ const { ProviderMixin } = createPlayer({
   features: videoFeatures,
 });
 
+/**
+ * Player-state provider registered as `<video-player>`.
+ *
+ * The element owns the configured video store but no layout. Put a skin or `<media-container>` inside it to provide the
+ * media, controls, and fullscreen target.
+ */
 export class VideoPlayerElement extends ProviderMixin(UIElement) {
   static readonly tagName = 'video-player';
 }
