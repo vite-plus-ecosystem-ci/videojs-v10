@@ -26,6 +26,7 @@ import type {
   DataAttrDef,
   DataAttrsExtraction,
   ExtraDataAttrsSource,
+  HtmlExtraction,
   PartReference,
   PartSource,
   PropDef,
@@ -120,6 +121,14 @@ export function buildCSSVars(cssVarsData: CSSVarsExtraction): Record<string, CSS
   }
 
   return cssCustomProperties;
+}
+
+function buildHtmlPlatform(htmlData: HtmlExtraction): NonNullable<PartReference['platforms']['html']> {
+  const platform: NonNullable<PartReference['platforms']['html']> = { tagName: htmlData.tagName };
+
+  if (htmlData.events.length > 0) platform.events = htmlData.events;
+
+  return platform;
 }
 
 // ─── Discovery ─────────────────────────────────────────────────────
@@ -418,7 +427,7 @@ function buildSingleComponentReference(source: ComponentSource, program: OxcProj
   }
 
   if (htmlData) {
-    result.platforms.html = { tagName: htmlData.tagName };
+    result.platforms.html = buildHtmlPlatform(htmlData);
   }
 
   if (result.description === undefined) delete result.description;
@@ -466,7 +475,7 @@ function buildMultiPartReference(
       if (!partRef.description) delete partRef.description;
 
       if (htmlData) {
-        partRef.platforms.html = { tagName: htmlData.tagName };
+        partRef.platforms.html = buildHtmlPlatform(htmlData);
       }
 
       partsRecord[part.kebab] = partRef;
@@ -501,7 +510,7 @@ function buildMultiPartReference(
       if (!partRef.description) delete partRef.description;
 
       if (htmlData) {
-        partRef.platforms.html = { tagName: htmlData.tagName };
+        partRef.platforms.html = buildHtmlPlatform(htmlData);
       }
 
       partsRecord[part.kebab] = partRef;

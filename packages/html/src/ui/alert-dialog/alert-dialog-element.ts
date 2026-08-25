@@ -15,6 +15,7 @@ import { alertDialogContext } from './context';
 
 let idCounter = 0;
 
+/** @fires open-change - Fired when the dialog's open state changes. */
 export class AlertDialogElement extends UIElement {
   static readonly tagName = 'media-alert-dialog';
 

@@ -11,4 +11,9 @@ export class ToggleButtonElement {
     disabled: { type: Boolean },
     label: { type: String },
   };
+
+  /** @fires pressed-change - Emitted when the pressed state changes. */
+  announcePressed(pressed: boolean) {
+    this.dispatchEvent(new CustomEvent('pressed-change', { detail: { pressed }, bubbles: true }));
+  }
 }
