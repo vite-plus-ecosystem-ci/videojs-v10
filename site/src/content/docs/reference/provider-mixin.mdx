@@ -6,18 +6,26 @@ description: Mixin that creates the player store and manages the full media atta
 import UtilReference from "@/components/docs/api-reference/UtilReference.astro";
 import DocsLink from "@/components/docs/DocsLink.astro";
 
-`ProviderMixin` creates a class that owns the player store and the media attach lifecycle. It publishes the store to context so descendants can consume it, and calls `store.attach()` when both a media element and a container are available.
+`ProviderMixin` creates a class that owns the player store and the media attach lifecycle. It publishes the store and registration APIs through context, then calls `store.attach()` when a media element is available. A container is optional.
 
 ### Store lifecycle
 
 The store is created when the element is constructed. On `connectedCallback`, the mixin publishes three context values to its descendants:
 
-{/* TODO: link context keys to concept page once written (https://github.com/videojs/v10/issues/1033) */}
-- **`playerContext`** — the store, consumed by <DocsLink slug="reference/player-controller">`PlayerController`</DocsLink> and other controllers
-- **`mediaContext`** — a registration callback for media elements that returns a release function
-- **`containerContext`** — a registration callback for container elements that returns a release function
+| Context | Published value |
+| --- | --- |
+| `playerContext` | The store, consumed by <DocsLink slug="reference/player-controller">`PlayerController`</DocsLink> and other controllers |
+| `mediaContext` | The current media, which may be `null`, and a `registerMedia()` callback that returns a release function |
+| `containerContext` | The current container, which may be `null`, and a `registerContainer()` callback that returns a release function |
 
-When a media element and a container both register, the provider calls `store.attach({ media, container })`. Each release function removes only the element that registered it, so disconnecting an older element cannot clear a newer registration. The provider also watches for plain `<video>` and `<audio>` elements as they are added, removed, or replaced.
+The attachment flow is:
+
+1. A custom media element registers through `mediaContext`, or the provider discovers the first descendant `<video>` or `<audio>` element.
+2. A container can register through `containerContext`.
+3. Once media is available, the provider calls `store.attach({ media, container })`. `media` is required, while `container` can be `null`.
+4. When the selected media or container changes, the provider detaches the previous target and attaches the new one.
+
+Each release function removes only the element that registered it, so disconnecting an older element cannot clear a newer registration. The provider watches for plain `<video>` and `<audio>` elements as they are added, removed, or replaced.
 
 {/* TODO: link destroyCallback to lifecycle reference once written (https://github.com/videojs/v10/issues/1034) */}
 On `disconnectedCallback`, the mixin detaches the current media target but keeps the store alive. An element moved in the DOM reconnects without losing state. The store is destroyed in `destroyCallback`.
