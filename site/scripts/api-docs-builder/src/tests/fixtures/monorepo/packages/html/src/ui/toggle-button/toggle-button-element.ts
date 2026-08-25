@@ -16,4 +16,8 @@ export class ToggleButtonElement extends EventTarget {
   announcePressed(pressed: boolean) {
     this.dispatchEvent(new CustomEvent('pressed-change', { detail: { pressed }, bubbles: true }));
   }
+
+  announceFocus() {
+    this.dispatchEvent(new Event('focus-change'));
+  }
 }
