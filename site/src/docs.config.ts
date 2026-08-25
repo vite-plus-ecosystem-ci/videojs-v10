@@ -134,6 +134,7 @@ export const sidebar: Sidebar = [
           { slug: 'reference/seek-button' },
           { slug: 'reference/seek-indicator' },
           { slug: 'reference/slider' },
+          { slug: 'reference/status-announcer' },
           { slug: 'reference/thumbnail' },
           { slug: 'reference/time' },
           { slug: 'reference/time-slider' },
