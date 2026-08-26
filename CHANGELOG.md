@@ -2,6 +2,75 @@
 
 All notable changes to this project will be documented in this file.
 
+## [@videojs/core@10.0.0-beta.32] - 2026-08-26
+
+### 🚀 Features
+- *(spf)* Keep track selection within the initial codec family ([#2289](https://github.com/videojs/v10/pull/2289)) by [@cjpillsbury](https://github.com/cjpillsbury)
+- *(packages)* Add backdrop component parts ([#2343](https://github.com/videojs/v10/pull/2343)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Add vjsc style diagnostics ([#2345](https://github.com/videojs/v10/pull/2345)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Expose container controls state ([#2376](https://github.com/videojs/v10/pull/2376)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Add volume popover compound ([#2378](https://github.com/videojs/v10/pull/2378)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Add dialog component ([#2379](https://github.com/videojs/v10/pull/2379)) by [@mihar-22](https://github.com/mihar-22)
+
+### 🐛 Bug Fixes
+- *(site)* Version CDN examples ([#2335](https://github.com/videojs/v10/pull/2335)) by [@decepulis](https://github.com/decepulis)
+- *(i18n)* Preserve registered translation overrides ([#2354](https://github.com/videojs/v10/pull/2354)) by [@sampotts](https://github.com/sampotts)
+- *(sandbox)* Use fixed ports for sandbox and skins dev ([#2353](https://github.com/videojs/v10/pull/2353)) by [@sampotts](https://github.com/sampotts)
+- *(packages)* Restore minimal volume controls ([#2386](https://github.com/videojs/v10/pull/2386)) by [@sampotts](https://github.com/sampotts)
+- Set oxlint path in vscode settings ([#2390](https://github.com/videojs/v10/pull/2390)) by [@sampotts](https://github.com/sampotts)
+- *(html)* Handle detached popup roots ([#2348](https://github.com/videojs/v10/pull/2348)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Harden vjsc vite workflow ([#2355](https://github.com/videojs/v10/pull/2355)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Restore vjsc skin visual parity ([#2344](https://github.com/videojs/v10/pull/2344)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Add audio playback rate tooltips ([#2389](https://github.com/videojs/v10/pull/2389)) by [@sampotts](https://github.com/sampotts)
+- *(core)* Preserve anchored popovers while scrolling ([#2387](https://github.com/videojs/v10/pull/2387)) by [@sampotts](https://github.com/sampotts)
+- *(packages)* Make html entries server importable ([#2428](https://github.com/videojs/v10/pull/2428)) by [@mihar-22](https://github.com/mihar-22)
+- *(media)* Make engine entries server importable ([#2429](https://github.com/videojs/v10/pull/2429)) by [@mihar-22](https://github.com/mihar-22)
+- *(test)* Restore e2e test coverage ([#2401](https://github.com/videojs/v10/pull/2401)) by [@mihar-22](https://github.com/mihar-22)
+- *(element)* Preserve props across late registration ([#2400](https://github.com/videojs/v10/pull/2400)) by [@mihar-22](https://github.com/mihar-22)
+
+### 💼 Other
+- *(root)* Migrate toolchain to vite plus ([#2035](https://github.com/videojs/v10/pull/2035)) by [@mihar-22](https://github.com/mihar-22)
+
+### 🚜 Refactor
+- *(vjsc)* Migrate from ts to oxc + rolldown ([#2287](https://github.com/videojs/v10/pull/2287)) by [@mihar-22](https://github.com/mihar-22)
+- *(i18n)* Use Intl.NumberFormat and Intl.ListFormat instead of Intl.DurationFormat ([#2336](https://github.com/videojs/v10/pull/2336)) by [@sampotts](https://github.com/sampotts)
+- *(html)* [**breaking**] Replace ContainerMixin with ContainerElement ([#2280](https://github.com/videojs/v10/pull/2280)) by [@mihar-22](https://github.com/mihar-22)
+- *(html)* [**breaking**] Rename MediaElement to UIElement ([#2245](https://github.com/videojs/v10/pull/2245)) by [@mihar-22](https://github.com/mihar-22)
+- *(core)* Simplify component file names ([#2064](https://github.com/videojs/v10/pull/2064)) by [@mihar-22](https://github.com/mihar-22)
+- *(site)* Replace api docs compiler with oxc ([#2392](https://github.com/videojs/v10/pull/2392)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Separate menu popup and content ([#2347](https://github.com/videojs/v10/pull/2347)) by [@mihar-22](https://github.com/mihar-22)
+- *(packages)* Reuse tooltip styles for audio previews ([#2388](https://github.com/videojs/v10/pull/2388)) by [@sampotts](https://github.com/sampotts)
+- *(skin)* Prefix all internal css custom properties ([#2391](https://github.com/videojs/v10/pull/2391)) by [@sampotts](https://github.com/sampotts)
+
+### 📚 Documentation
+- *(site)* Document thumbnail CORS inheritance ([#2298](https://github.com/videojs/v10/pull/2298)) by [@luwes](https://github.com/luwes)
+- *(site)* Add changelog prose for 10.0.0-beta.31 ([#2299](https://github.com/videojs/v10/pull/2299)) by [@github-actions[bot]](https://github.com/github-actions[bot])
+- *(site)* Clarify plyr and media-chrome migration guides ([#2329](https://github.com/videojs/v10/pull/2329)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Add background video guide ([#2339](https://github.com/videojs/v10/pull/2339)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Correct Mux Player migration guidance ([#2328](https://github.com/videojs/v10/pull/2328)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Tiny docs chores ([#2332](https://github.com/videojs/v10/pull/2332)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Add vue and svelte integration guides ([#2333](https://github.com/videojs/v10/pull/2333)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Clarify player layout ownership ([#2334](https://github.com/videojs/v10/pull/2334)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Add dialog API references ([#2375](https://github.com/videojs/v10/pull/2375)) by [@mihar-22](https://github.com/mihar-22)
+- *(site)* Explain skin customization model ([#2315](https://github.com/videojs/v10/pull/2315)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Clarify live migration behavior ([#2326](https://github.com/videojs/v10/pull/2326)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Refine Vue and Svelte integration examples ([#2374](https://github.com/videojs/v10/pull/2374)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Document browser and tooling compatibility ([#2330](https://github.com/videojs/v10/pull/2330)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Document non-interactive cli use ([#2338](https://github.com/videojs/v10/pull/2338)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Correct v10 guides after merge ([#2385](https://github.com/videojs/v10/pull/2385)) by [@decepulis](https://github.com/decepulis)
+- *(site)* Update menu and slider references ([#2240](https://github.com/videojs/v10/pull/2240)) by [@sampotts](https://github.com/sampotts)
+
+### ⚡ Performance
+- *(packages)* Enable native MagicString ([#2311](https://github.com/videojs/v10/pull/2311)) by [@mihar-22](https://github.com/mihar-22)
+
+### 🎨 Styling
+- *(root)* Improve source code flow ([#2350](https://github.com/videojs/v10/pull/2350)) by [@mihar-22](https://github.com/mihar-22)
+- *(root)* Enable jsdoc formatting ([#2393](https://github.com/videojs/v10/pull/2393)) by [@mihar-22](https://github.com/mihar-22)
+- *(root)* Group declarations with guard clauses ([#2394](https://github.com/videojs/v10/pull/2394)) by [@mihar-22](https://github.com/mihar-22)
+
+### ⚙️ Miscellaneous Tasks
+- *(ci)* Migrate agent workflows to codex ([#2312](https://github.com/videojs/v10/pull/2312)) by [@mihar-22](https://github.com/mihar-22)
+
 ## [@videojs/core@10.0.0-beta.31] - 2026-08-21
 
 ### 🚀 Features
@@ -1738,6 +1807,7 @@ All notable changes to this project will be documented in this file.
 * @decepulis made their first contribution in [#118](https://github.com/videojs/v10/pull/118)
 * @heff made their first contribution
 
+[@videojs/core@10.0.0-beta.32]: https://github.com/videojs/v10/compare/@videojs/core@10.0.0-beta.31...@videojs/core@10.0.0-beta.32
 [@videojs/core@10.0.0-beta.31]: https://github.com/videojs/v10/compare/@videojs/core@10.0.0-beta.30...@videojs/core@10.0.0-beta.31
 [@videojs/core@10.0.0-beta.30]: https://github.com/videojs/v10/compare/@videojs/core@10.0.0-beta.29...@videojs/core@10.0.0-beta.30
 [@videojs/core@10.0.0-beta.29]: https://github.com/videojs/v10/compare/@videojs/core@10.0.0-beta.28...@videojs/core@10.0.0-beta.29
