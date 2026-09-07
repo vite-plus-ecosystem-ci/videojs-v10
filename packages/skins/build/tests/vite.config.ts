@@ -2,7 +2,7 @@ import { resolve } from 'node:path';
 
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import { normalizePath } from 'vite';
+import { normalizePath } from 'vite-plus';
 import { defineConfig } from 'vite-plus';
 import { vjscPlugin } from 'vjsc/vite';
 

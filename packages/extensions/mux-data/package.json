@@ -50,6 +50,7 @@
     "dashjs": "5.2.0",
     "hls.js": "1.6.7",
     "jsdom": "^26.1.0",
+    "vite": "catalog:",
     "vite-plus": "catalog:",
     "vitest": "catalog:"
   }
