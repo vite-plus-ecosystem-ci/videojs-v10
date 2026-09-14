@@ -43,7 +43,7 @@
     "shadcn": "^4.19.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.2",
-    "vite": "^8.2.2",
+    "vite": "catalog:",
     "vite-plus": "catalog:",
     "vitest": "catalog:",
     "vjsc": "workspace:*"
