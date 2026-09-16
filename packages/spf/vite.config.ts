@@ -31,6 +31,8 @@ export default defineConfig({
     },
   },
   test: {
+    clearMocks: false,
+    sharedViteServer: false,
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'lcov'],
@@ -90,6 +92,7 @@ export default defineConfig({
             'src/playback/actors/dom/**/*.test.ts',
           ],
           browser: {
+            locators: { exact: false },
             enabled: true,
             headless: true,
             provider: playwright(),
@@ -104,6 +107,7 @@ export default defineConfig({
           name: 'playback-engines',
           include: ['src/playback/engines/**/*.test.ts'],
           browser: {
+            locators: { exact: false },
             enabled: true,
             headless: true,
             provider: playwright(),
@@ -120,6 +124,7 @@ export default defineConfig({
           name: 'playback-adapters',
           include: ['src/playback/adapters/**/*.test.ts'],
           browser: {
+            locators: { exact: false },
             enabled: true,
             headless: true,
             provider: playwright(),

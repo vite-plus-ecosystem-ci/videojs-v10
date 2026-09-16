@@ -41,6 +41,7 @@ export default defineConfig({
     __CLI_VERSION__: JSON.stringify('0.0.0-test'),
   },
   test: {
+    clearMocks: false,
     globals: true,
   },
   resolve: {

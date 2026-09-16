@@ -88,6 +88,8 @@ export default defineConfig({
     __DEV__: 'true',
   },
   test: {
+    clearMocks: false,
+    sharedViteServer: false,
     projects: [
       {
         extends: true,

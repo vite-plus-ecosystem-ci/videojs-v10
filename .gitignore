@@ -198,3 +198,4 @@ packages/spf/test-fixtures/streams/*
 
 # Local archive for reference (not committed)
 /.archive/
+.vitest/

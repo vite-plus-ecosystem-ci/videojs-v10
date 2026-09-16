@@ -16,6 +16,8 @@ export default defineConfig({
     },
   },
   test: {
+    clearMocks: false,
+    sharedViteServer: false,
     projects: [
       {
         extends: true,

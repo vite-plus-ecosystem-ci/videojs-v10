@@ -40,6 +40,7 @@ export default defineConfig({
     },
   },
   test: {
+    clearMocks: false,
     include: ['src/**/*.test.{ts,tsx}'],
   },
   pack,

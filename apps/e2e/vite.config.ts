@@ -5,6 +5,7 @@ import { cachedTaskInputs, workspaceTaskDependencies } from '../../build/task.ts
 const testInputs = [...cachedTaskInputs, '!playwright-report/**', '!test-results/**', '!suites/registry/.generated/**'];
 
 export default defineConfig({
+  test: { clearMocks: false },
   run: {
     tasks: {
       typecheck: {

@@ -55,6 +55,7 @@ export default defineConfig({
     conditions: ['browser', 'development', 'module', 'import', 'default'],
   },
   test: {
+    clearMocks: false,
     environment: 'jsdom',
     include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.ts', 'tests/**/*.test.ts'],
   },

@@ -82,9 +82,13 @@ export default defineConfig({
     },
   },
   test: {
+    clearMocks: false,
+    sharedViteServer: false,
     projects: [
       {
+        extends: false,
         test: {
+          clearMocks: false,
           name: 'skins',
           root: packageDir,
           include: ['build/**/*.test.ts', 'src/**/*.test.ts'],

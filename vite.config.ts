@@ -40,6 +40,7 @@ const ignoredPaths = [
 ];
 
 export default defineConfig({
+  test: { clearMocks: false },
   fmt: {
     arrowParens: 'always',
     bracketSpacing: true,

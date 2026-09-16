@@ -31,6 +31,8 @@ export default defineConfig({
     __DEV__: 'true',
   },
   test: {
+    clearMocks: false,
+    sharedViteServer: false,
     onConsoleLog: (log) => !log.includes('Lit is in dev mode'),
     projects: [
       {

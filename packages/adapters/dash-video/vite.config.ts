@@ -25,6 +25,6 @@ export default defineConfig({
     },
   },
   define: { __DEV__: 'true' },
-  test: { environment: 'jsdom' },
+  test: { clearMocks: false, environment: 'jsdom' },
   pack: packageBuildModes.map(createPackConfig),
 });

@@ -35,6 +35,6 @@ export default defineConfig({
     __DEV__: 'true',
     __PLAYER_VERSION__: JSON.stringify(packageJson.version),
   },
-  test: { environment: 'jsdom' },
+  test: { clearMocks: false, environment: 'jsdom' },
   pack: packageBuildModes.map(createPackConfig),
 });
