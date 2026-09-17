@@ -1,4 +1,4 @@
-import { format, type FormatConfig } from 'oxfmt';
+import { format, type FormatConfig } from 'vite-plus/fmt';
 
 const config = {
   arrowParens: 'always',
