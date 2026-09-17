@@ -41,6 +41,10 @@ export default defineConfig({
     __CLI_VERSION__: JSON.stringify('0.0.0-test'),
   },
   test: {
+    // Vitest v4 compatibility: preserve mock call history.
+    // Remove after tests no longer rely on calls from setup or earlier tests.
+    // https://vitest.dev/guide/migration/#clearmocks-is-enabled-by-default
+    clearMocks: false,
     globals: true,
   },
   resolve: {
