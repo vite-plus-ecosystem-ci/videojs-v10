@@ -89,6 +89,7 @@
   },
   "devDependencies": {
     "jsdom": "^27.0.0",
+    "vite": "catalog:",
     "vite-plus": "catalog:",
     "vitest": "catalog:"
   }

@@ -8,7 +8,9 @@ trustPolicyExclude:
   - 'chokidar@4.0.3'
   - 'semver@6.3.1'
   - 'undici-types@6.21.0'
-
+  - 'vite-plus'
+  - '@voidzero-dev/*'
+  - '@netlify/serverless-functions-api'
 peerDependencyRules:
   allowedVersions:
     '@svta/cml-cta': 1.0.1
@@ -47,16 +49,21 @@ packages:
 
 allowBuilds:
   '@parcel/watcher@2.5.6': true
+  '@sentry/cli@2.58.6': true
   '@sentry/cli@2.58.5': true
+  'esbuild@0.28.2': true
   'esbuild@0.28.0 || 0.28.1': true
   'sharp@0.34.5': true
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@0.2.8
-  vitest: 4.1.10
-  vite-plus: 0.2.8
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.fba044cf40fea5a7bf4a2ee97822f174eab33dfa
+  vitest: 4.1.11
+  vite-plus: 0.0.0-commit.fba044cf40fea5a7bf4a2ee97822f174eab33dfa
+  '@vitest/browser-playwright': 4.1.11
+  '@vitest/coverage-v8': 4.1.11
+  '@vitest/ui': 4.1.11
 overrides:
-  vite: 'catalog:'
-  vitest: 'catalog:'
+  vite@*: 'catalog:'
+  vitest@*: 'catalog:'
 minimumReleaseAgeExclude:
   - vite-plus
   - '@voidzero-dev/*'
@@ -66,3 +73,5 @@ minimumReleaseAgeExclude:
   - '@oxlint-tsgolint/*'
   - oxfmt
   - '@oxfmt/*'
+  - vitest
+  - '@vitest/*'

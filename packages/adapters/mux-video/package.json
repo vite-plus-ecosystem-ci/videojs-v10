@@ -55,6 +55,7 @@
   "devDependencies": {
     "@videojs/mux": "workspace:*",
     "jsdom": "^26.1.0",
+    "vite": "catalog:",
     "vite-plus": "catalog:",
     "vitest": "catalog:"
   }
