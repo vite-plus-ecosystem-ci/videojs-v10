@@ -45,6 +45,7 @@
     "vite": "catalog:",
     "vite-plus": "catalog:",
     "vitest": "catalog:",
-    "vjsc": "workspace:*"
+    "vjsc": "workspace:*",
+    "oxfmt": "0.61.0"
   }
 }
