@@ -109,6 +109,10 @@ export default defineConfig({
     conditions: ['browser', 'development', 'module', 'import', 'default'],
   },
   test: {
+    // Vitest v4 compatibility: preserve mock call history.
+    // Remove after tests no longer rely on calls from setup or earlier tests.
+    // https://vitest.dev/guide/migration/#clearmocks-is-enabled-by-default
+    clearMocks: false,
     passWithNoTests: true,
     onConsoleLog: (log) => !log.includes('Lit is in dev mode'),
     environment: 'happy-dom',
