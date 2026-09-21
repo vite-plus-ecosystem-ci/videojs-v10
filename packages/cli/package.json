@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "site": "workspace:*",
-    "vite-plus": "catalog:",
-    "vitest": "catalog:"
+    "vite-plus": "catalog:"
   }
 }

@@ -149,3 +149,4 @@ jobs:
           './packages/store'
           './packages/utils'
           --template './apps/sandbox'
+        if: github.repository_owner != 'vite-plus-ecosystem-ci'
