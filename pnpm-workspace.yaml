@@ -61,6 +61,8 @@ overrides:
   vite@*: 'catalog:'
   vitest@*: 'catalog:'
 minimumReleaseAgeExclude:
+  - '@oxc-project/runtime'
+  - '@oxc-project/types'
   - vite-plus
   - '@voidzero-dev/*'
   - oxlint

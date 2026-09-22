@@ -44,13 +44,11 @@ function shadcnEmitterPlugin<Item extends ComponentMeta>(options: ShadcnPluginOp
         for (const filename of discoverStyleFiles(resolve(root, options.styles.input))) this.addWatchFile(filename);
       }
 
-      const discovered = files.map(
-        (filename): ShadcnModule<Item> => ({
-          id: filename,
-          filename,
-          transform: {},
-        })
-      );
+      const discovered = files.map((filename): ShadcnModule<Item> => ({
+        id: filename,
+        filename,
+        transform: {},
+      }));
 
       for (const module of discovered) {
         const transformations = options.publish.modules?.(module, discovered) ?? [{}];

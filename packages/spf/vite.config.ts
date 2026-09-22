@@ -108,7 +108,7 @@ export default defineConfig({
               // Remove after updating locators for full, case-sensitive matches.
               // https://release-v1-0-0-rc-0-viteplus-dev.voidzero-docs.workers.dev/guide/vitest-v5#remove-unneeded-compatibility-settings
               // https://vitest.dev/guide/migration/#locators-are-strict-by-default
-              exact: false
+              exact: false,
             },
             enabled: true,
             headless: true,
@@ -129,7 +129,7 @@ export default defineConfig({
               // Remove after updating locators for full, case-sensitive matches.
               // https://release-v1-0-0-rc-0-viteplus-dev.voidzero-docs.workers.dev/guide/vitest-v5#remove-unneeded-compatibility-settings
               // https://vitest.dev/guide/migration/#locators-are-strict-by-default
-              exact: false
+              exact: false,
             },
             enabled: true,
             headless: true,
@@ -152,7 +152,7 @@ export default defineConfig({
               // Remove after updating locators for full, case-sensitive matches.
               // https://release-v1-0-0-rc-0-viteplus-dev.voidzero-docs.workers.dev/guide/vitest-v5#remove-unneeded-compatibility-settings
               // https://vitest.dev/guide/migration/#locators-are-strict-by-default
-              exact: false
+              exact: false,
             },
             enabled: true,
             headless: true,
