@@ -2,6 +2,8 @@ minimumReleaseAge: 1440
 shellEmulator: true
 trustPolicy: no-downgrade
 trustPolicyExclude:
+  - vite-plus
+  - '@voidzero-dev/*'
   - '@netlify/edge-bundler@14.10.3'
   - '@netlify/serverless-functions-api@2.16.0'
   - '@netlify/zip-it-and-ship-it@14.7.1'
@@ -49,12 +51,15 @@ allowBuilds:
   'esbuild@0.28.0 || 0.28.1': true
   'sharp@0.34.5': true
 catalog:
-  vite: npm:@voidzero-dev/vite-plus-core@0.2.8
-  vitest: 4.1.10
-  vite-plus: 0.2.8
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.e0f77ee2353b38c77d7165d3305f9f6d705b4d62
+  vitest: 5.0.1
+  vite-plus: 0.0.0-commit.e0f77ee2353b38c77d7165d3305f9f6d705b4d62
+  '@vitest/browser-playwright': 5.0.1
+  '@vitest/coverage-v8': 5.0.1
+  '@vitest/ui': 5.0.1
 overrides:
-  vite: 'catalog:'
-  vitest: 'catalog:'
+  vite@*: 'catalog:'
+  vitest@*: 'catalog:'
 minimumReleaseAgeExclude:
   - vite-plus
   - '@voidzero-dev/*'
@@ -64,3 +69,5 @@ minimumReleaseAgeExclude:
   - '@oxlint-tsgolint/*'
   - oxfmt
   - '@oxfmt/*'
+  - vitest
+  - '@vitest/*'

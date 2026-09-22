@@ -2,7 +2,7 @@ import { resolve } from 'node:path';
 
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import { normalizePath } from 'vite';
+import { normalizePath } from 'vite-plus';
 import { defineConfig } from 'vite-plus';
 
 import { iconElementSourcePlugin } from '../../icons/vjsc/vite.ts';
@@ -16,6 +16,13 @@ const htmlDefineDir = normalizePath(resolve(packageDir, '../html/src/define'));
 const htmlIconElementDir = normalizePath(resolve(packageDir, '../html/src/icons/element'));
 
 export default defineConfig({
+  test: {
+    // Vitest v4 compatibility: preserve mock call history.
+    // Remove after tests no longer rely on calls from setup or earlier tests.
+    // https://release-v1-0-0-rc-0-viteplus-dev.voidzero-docs.workers.dev/guide/vitest-v5#remove-unneeded-compatibility-settings
+    // https://vitest.dev/guide/migration/#clearmocks-is-enabled-by-default
+    clearMocks: false
+  },
   root: import.meta.dirname,
   define: {
     __DEV__: 'true',

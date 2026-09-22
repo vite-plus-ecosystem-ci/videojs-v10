@@ -114,6 +114,7 @@ jobs:
       # regenerates the gitignored src/ from templates/ on boot, so the sandbox
       # still works even though src/ is never part of the upload.
       - name: Publish preview packages
+        if: ${{ github.repository_owner != 'vite-plus-ecosystem-ci' }}
         env:
           VIDEOJS_SKIP_PACKAGE_DOCS: '1'
         run: >
