@@ -2,6 +2,9 @@ minimumReleaseAge: 1440
 shellEmulator: true
 trustPolicy: no-downgrade
 trustPolicyExclude:
+  # ecosystem-ci smoke test: preview builds carry no provenance and are brand new
+  - vite-plus
+  - '@voidzero-dev/*'
   - '@netlify/edge-bundler@14.10.3'
   - '@netlify/serverless-functions-api@2.16.0'
   - '@netlify/zip-it-and-ship-it@14.7.1'
