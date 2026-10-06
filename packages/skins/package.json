@@ -39,7 +39,6 @@
     "caniuse-lite": "^1.0.30001810",
     "cn": "^0.2.5",
     "lightningcss": "catalog:",
-    "oxfmt": "0.70.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "shadcn": "^4.19.0",
